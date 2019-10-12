@@ -1,0 +1,41 @@
+# Continuous control with DDPG
+ ## how the DDPG works:
+ the Qnetwork consiste of 4 networks 2 are the same we call them actor (local and target actor) used to predict the action of the state s , and ther 2 networks of the same architecture we call them the critic networks, and as the actors networks one is local and the 2nd is the target, we train the local one and after some steps of training we update the target one.  
+
+and we use the **MSE** function to calculate the difference between the target and the predicted .
+
+ ## network description <br/>
+
+in the first of this challange i tried with a big architecteur with 5 layers and a small number of unites, after some episode i found out that this architector donesn't help the agent to learn at all. so after different networks, i found out that 
+
+## the training and the results 
+in my project i used this paramaters 
+> BUFFER_SIZE = int(1e5)   : i used a buffer of a big size to collect as many simples as i can
+
+> BATCH_SIZE = 256   : a big batch size gave a good values in this case, it alows the network to lean from a lot of expeincies in one time  
+
+> GAMMA = 0.99  : it's some how a big value to let the network focus on all the actions.
+> TAU = 0.003              
+
+> LR = 4e-5               
+
+> UPDATE_EVERY = 4 
+
+and i got an avrege of rewards equal to 15.03 just after 607 episodes.
+
+<p align="center">
+  <img src="./Images/episodes.png"/>
+</p>
+
+and the plot of rewards is 
+
+<p align="center">
+  <img src="./Images/plot.png"/>
+</p>
+
+## future work
+this project can be improved in many sides.
+- 1 - use images as the input.
+- 2 - parameter tuning.
+
+and other improvemnts 

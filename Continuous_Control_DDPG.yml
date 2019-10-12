@@ -1,0 +1,8 @@
+name: Continuous_Control_DDPG
+dependencies:
+  - python
+  - numpy
+  - matplotlib
+  - pytorch
+  - pandas
+  - jupyter
