@@ -6,22 +6,24 @@ and we use the **MSE** function to calculate the difference between the target a
 
  ## network description <br/>
 
-in the first of this challange i tried with a big architecteur with 5 layers and a small number of unites, after some episode i found out that this architector donesn't help the agent to learn at all. so after different networks, i found out that 
+in the first of this challange i tried with a big architecteur with 5 layers and a small number of unites, after some episode i found out that this architector donesn't help the agent to learn at all. so after different networks, i found out that a small network with a big number of hidden unites helps very well. so i worked with the same architecture in the actor and critic networks with 2 hiden layers of 350 and 300 unites.
 
-## the training and the results 
+## the training and the re  sults 
 in my project i used this paramaters 
 > BUFFER_SIZE = int(1e5)   : i used a buffer of a big size to collect as many simples as i can
 
-> BATCH_SIZE = 256   : a big batch size gave a good values in this case, it alows the network to lean from a lot of expeincies in one time  
+> BATCH_SIZE = 128   : a big batch size gave a good values in this case, it alows the network to lean from a lot of expeincies in one time  
 
 > GAMMA = 0.99  : it's some how a big value to let the network focus on all the actions.
-> TAU = 0.003              
+> TAU = 0.003  
 
-> LR = 4e-5               
 
-> UPDATE_EVERY = 4 
+> LEARN_EVERY = 1 i found out that set the update value to 1 helps a a lot
 
-and i got an avrege of rewards equal to 15.03 just after 607 episodes.
+> LR_actor and LR_critic = 1e-4               
+
+
+and i got an avrege of rewards equal to  just after  episodes.
 
 <p align="center">
   <img src="./Images/episodes.png"/>
@@ -35,7 +37,7 @@ and the plot of rewards is
 
 ## future work
 this project can be improved in many sides.
-- 1 - use images as the input.
-- 2 - parameter tuning.
+- 1 - 
+- 2 - 
 
 and other improvemnts 
